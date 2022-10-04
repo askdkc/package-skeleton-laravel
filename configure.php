@@ -142,38 +142,38 @@ function replaceForAllOtherOSes(): array
 }
 
 $gitName = run('git config user.name');
-$authorName = ask('Author name', $gitName);
+$authorName = ask('作者名は？', $gitName);
 
 $gitEmail = run('git config user.email');
-$authorEmail = ask('Author email', $gitEmail);
+$authorEmail = ask('E-mailアドレスは？', $gitEmail);
 
 $usernameGuess = explode(':', run('git config remote.origin.url'))[1];
 $usernameGuess = dirname($usernameGuess);
 $usernameGuess = basename($usernameGuess);
-$authorUsername = ask('Author username', $usernameGuess);
+$authorUsername = ask('作者のユーザ名は？', $usernameGuess);
 
-$vendorName = ask('Vendor name', $authorUsername);
+$vendorName = ask('Vendor名は？', $authorUsername);
 $vendorSlug = slugify($vendorName);
 $vendorNamespace = ucwords($vendorName);
-$vendorNamespace = ask('Vendor namespace', $vendorNamespace);
+$vendorNamespace = ask('Vendor namespaceは？', $vendorNamespace);
 
 $currentDirectory = getcwd();
 $folderName = basename($currentDirectory);
 
-$packageName = ask('Package name', $folderName);
+$packageName = ask('パッケージ名は何にする？', $folderName);
 $packageSlug = slugify($packageName);
 $packageSlugWithoutPrefix = remove_prefix('laravel-', $packageSlug);
 
 $className = title_case($packageName);
-$className = ask('Class name', $className);
+$className = ask('Class名はどうする？', $className);
 $variableName = lcfirst($className);
-$description = ask('Package description', "This is my package {$packageSlug}");
+$description = ask('パッケージの概要はどうする？', "このパッケージは {$packageSlug}");
 
-$usePhpStan = confirm('Enable PhpStan?', true);
-$useLaravelPint = confirm('Enable Laravel Pint?', true);
-$useDependabot = confirm('Enable Dependabot?', true);
-$useLaravelRay = confirm('Use Ray for debugging?', true);
-$useUpdateChangelogWorkflow = confirm('Use automatic changelog updater workflow?', true);
+$usePhpStan = confirm('PhpStanを有効化する？', true);
+$useLaravelPint = confirm('Laravel Pintを有効化する？', true);
+$useDependabot = confirm('GitHubのDependabotを有効化する？', true);
+$useLaravelRay = confirm('デバッグ用にSpatieのRayを使う？', true);
+$useUpdateChangelogWorkflow = confirm('変更履歴（Changelog）を自動更新するGitHubのworkflowを有効化する？', true);
 
 writeln('------');
 writeln("Author     : {$authorName} ({$authorUsername}, {$authorEmail})");
@@ -190,9 +190,9 @@ writeln('Use Ray App          : '.($useLaravelRay ? 'yes' : 'no'));
 writeln('Use Auto-Changelog   : '.($useUpdateChangelogWorkflow ? 'yes' : 'no'));
 writeln('------');
 
-writeln('This script will replace the above values in all relevant files in the project directory.');
+writeln('このスクリプトは上記の内容でスケルトンの中身を全て書き換えます');
 
-if (! confirm('Modify files?', true)) {
+if (! confirm('変更しちゃっていい？', true)) {
     exit(1);
 }
 
@@ -261,6 +261,6 @@ if (! $useUpdateChangelogWorkflow) {
     safeUnlink(__DIR__.'/.github/workflows/update-changelog.yml');
 }
 
-confirm('Execute `composer install` and run tests?') && run('composer install && composer test');
+confirm('`composer install`を実行して、初期テストしちゃう?') && run('composer install && composer test');
 
-confirm('Let this script delete itself?', true) && unlink(__FILE__);
+confirm('さて、もうこのスクリプト自身が不要なので、消しときましょうか？', true) && unlink(__FILE__);
