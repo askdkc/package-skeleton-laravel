@@ -6,88 +6,88 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
 <!--delete-->
 ---
-This repo can be used to scaffold a Laravel package. Follow these steps to get started:
+これはSpatie製のLaravel用パッケージの雛形生成機能を日本語化したものです。利用するには下記の手順に従いましょう:
 
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
-3. Have fun creating your package.
-4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
+1. このリポジトリのトップにある"Use this template"ボタンをクリックして、このスケルトンの中身そのままに新規リポを作成します
+2. それを自分の環境に`git clone`コマンドでダウンロードし、その中に移動して"php ./configure.php"を実行します。
+3. パッケージ生成用に幾つかの質問が出てくるので回答を入力すると、最後にこのスケルトンのプレースホルダを入力された内容で書き換えてすべてのファイルを準備してくれます
+4. 準備ができたのでパッケージの制作を楽しみましょう
 ---
 <!--/delete-->
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+ここにはパッケージの概要が入ります。1〜2パラグラフ程度の内容に留め、簡単な例を記載しましょう
 
-## Support us
+## Spatieをサポートしてね
 
 [<img src="https://github-ads.s3.eu-central-1.amazonaws.com/:package_name.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/:package_name)
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+たくさんの資源を注力して[最高レベルのオープンソースパッケージ](https://spatie.be/open-source)を作ってるので、サポートしてくれるなら[有償版の製品を何個か買ってくれると助かります](https://spatie.be/open-source/support-us).
 
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+それと、あなたの住んでる地元のポストカード使って、僕らの作ったパッケージの中から、あなたのお気に入りを書いて送ってくれると嬉しいです。住所は[ここに書いてあるよ](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
-## Installation
+## インストール
 
-You can install the package via composer:
+composerを使ってインストールしてください:
 
 ```bash
 composer require :vendor_slug/:package_slug
 ```
 
-You can publish and run the migrations with:
+下記のコマンドで必要なマイグレーションファイルの出力とマイグレーションを実行します:
 
 ```bash
 php artisan vendor:publish --tag=":package_slug-migrations"
 php artisan migrate
 ```
 
-You can publish the config file with:
+Configファイルは下記のコマンドで出力可能です:
 
 ```bash
 php artisan vendor:publish --tag=":package_slug-config"
 ```
 
-This is the contents of the published config file:
+出力されたConfigファイルの中身は次のような感じです:
 
 ```php
 return [
 ];
 ```
 
-Optionally, you can publish the views using
+オプションとして次のコマンドを実行すとでViewファイルも出力可能です:
 
 ```bash
 php artisan vendor:publish --tag=":package_slug-views"
 ```
 
-## Usage
+## 使い方
 
 ```php
 $variable = new VendorName\Skeleton();
 echo $variable->echoPhrase('Hello, VendorName!');
 ```
 
-## Testing
+## テスト方法
 
 ```bash
 composer test
 ```
 
-## Changelog
+## 変更履歴
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+最近の変更履歴については[CHANGELOG](CHANGELOG.md)を参照してください
 
-## Contributing
+## 貢献について
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+このパッケージに貢献したい人は[CONTRIBUTING](CONTRIBUTING.md)を参考にしてください
 
-## Security Vulnerabilities
+## セキュリティや脆弱性について
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+[セキュリティポリシー](../../security/policy)を見て、必要な情報を送ってくれると助かります
 
-## Credits
+## 貢献者
 
 - [:author_name](https://github.com/:author_username)
 - [All Contributors](../../contributors)
 
-## License
+## ライセンス
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
