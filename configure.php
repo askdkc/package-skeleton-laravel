@@ -142,7 +142,7 @@ function replaceForAllOtherOSes(): array
 }
 
 $gitName = run('git config user.name');
-$authorName = ask('作者名は？', $gitName);
+$authorName = ask('作者名は？(そのままEnterすると()内の値が使われます)', $gitName);
 
 $gitEmail = run('git config user.email');
 $authorEmail = ask('E-mailアドレスは？', $gitEmail);
@@ -167,7 +167,7 @@ $packageSlugWithoutPrefix = remove_prefix('laravel-', $packageSlug);
 $className = title_case($packageName);
 $className = ask('Class名はどうする？', $className);
 $variableName = lcfirst($className);
-$description = ask('パッケージの概要はどうする？', "このパッケージは {$packageSlug}");
+$description = ask('パッケージの概要はどうする？', "このパッケージは{$packageSlug}です");
 
 $usePhpStan = confirm('PhpStanを有効化する？', true);
 $useLaravelPint = confirm('Laravel Pintを有効化する？', true);
