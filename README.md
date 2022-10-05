@@ -9,8 +9,21 @@
 これはSpatie製のLaravel用パッケージの雛形生成機能を日本語化したものです。利用するには下記の手順に従いましょう:
 
 1. このリポジトリのトップにある"Use this template"ボタンをクリックして、このスケルトンの中身そのままに新規リポを作成します
+<img width="1332" alt="usetemplate" src="https://user-images.githubusercontent.com/7894265/193956909-dc75ac18-cefe-4517-82ff-53679089e524.png">
+
+
 2. それを自分の環境に`git clone`コマンドでダウンロードし、その中に移動して"php ./configure.php"を実行します。
+```sh
+git clone username/cloned_template_name
+```
+
 3. パッケージ生成用に幾つかの質問が出てくるので回答を入力すると、最後にこのスケルトンのプレースホルダを入力された内容で書き換えてすべてのファイルを準備してくれます
+```sh
+cd cloned_template_name
+php ./configure.php
+(色々質問が出てくるので答える)
+```
+
 4. 準備ができたのでパッケージの制作を楽しみましょう
 ---
 <!--/delete-->
