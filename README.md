@@ -6,10 +6,15 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
 <!--delete-->
 ---
-これはSpatie製のLaravel用パッケージの雛形生成機能を日本語化したものです。利用するには下記の手順に従いましょう:
+これはSpatie製のLaravel用パッケージの雛形生成機能を日本語化したものです<br>
+利用方法は下記の通りです:
 
 1. このリポジトリのトップにある"Use this template"ボタンをクリックして、このスケルトンの中身そのままに新規リポを作成します
 <img width="1332" alt="usetemplate" src="https://user-images.githubusercontent.com/7894265/193956909-dc75ac18-cefe-4517-82ff-53679089e524.png">
+
+<br><br>
+このテンプレートそのものが自分のGitHubリポジトリにコピーされるので、テンプレっぽい名前を選んでおいた方がわかりやすいです
+<img width="896" alt="templename" src="https://user-images.githubusercontent.com/7894265/193958676-8ea40d07-44a1-4271-b88d-35f4dc5bb9c0.png">
 
 
 2. それを自分の環境に`git clone`コマンドでダウンロードし、その中に移動して"php ./configure.php"を実行します。
@@ -24,7 +29,9 @@ php ./configure.php
 (色々質問が出てくるので答える)
 ```
 
-4. 準備ができたのでパッケージの制作を楽しみましょう
+4. これで準備ができたのでパッケージの制作を楽しみましょう<br>
+（今いるディレクトリが既にLaravelパッケージとして使えるようになってます）<br>
+好きにファイルを加えて、新規GitHubリポジトリを作成してPushして、[packagist](https://packagist.org)に登録すれば完了🎉
 ---
 <!--/delete-->
 パッケージをスケルトンから自動生成後に、ここにパッケージの概要を書きましょう。1〜2パラグラフ程度の内容に留め、簡単な例を記載しましょう
