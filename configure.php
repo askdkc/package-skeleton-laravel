@@ -154,7 +154,7 @@ $authorUsername = ask('作者のユーザ名は？', $usernameGuess);
 
 $vendorName = ask('Vendor名は？', $authorUsername);
 $vendorSlug = slugify($vendorName);
-$vendorNamespace = ucwords($vendorName);
+$vendorNamespace = str_replace('-', '', ucwords($vendorName));
 $vendorNamespace = ask('Vendor namespaceは？', $vendorNamespace);
 
 $currentDirectory = getcwd();
