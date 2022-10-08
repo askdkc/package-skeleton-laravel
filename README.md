@@ -32,6 +32,8 @@ php ./configure.php
 4. これで準備ができたのでパッケージの制作を楽しみましょう<br>
 （今いるディレクトリが既にLaravelパッケージとして使えるようになってます）<br>
 好きにファイルを加えて、新規GitHubリポジトリを作成してPushして、[packagist](https://packagist.org)に登録すれば完了🎉
+
+### ※より具体的な手順を記載した解説を[こちらに用意しておきました](https://github.com/askdkc/create-laravel-package)<br>
 ---
 <!--/delete-->
 パッケージをスケルトンから自動生成後に、ここにパッケージの概要を書きましょう。1〜2パラグラフ程度の内容に留め、簡単な例を記載しましょう
