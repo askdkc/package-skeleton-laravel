@@ -8,6 +8,8 @@ use VendorName\Skeleton\SkeletonServiceProvider;
 
 class TestCase extends Orchestra
 {
+    protected $fakeClient = null;
+    
     protected function setUp(): void
     {
         parent::setUp();
