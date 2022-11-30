@@ -14,7 +14,7 @@
 
 <br><br>
 このテンプレートそのものが自分のGitHubリポジトリにコピーされるので、テンプレっぽい名前を選んでおいた方がわかりやすいです
-<img width="896" alt="templename" src="https://user-images.githubusercontent.com/7894265/193958676-8ea40d07-44a1-4271-b88d-35f4dc5bb9c0.png">
+<img width="" alt="image" src="https://user-images.githubusercontent.com/7894265/204461364-6ff4e173-35e3-41ca-b373-06eef2f05d4a.png">
 
 
 2. それを自分の環境に`git clone`コマンドでダウンロードし、その中に移動して"php ./configure.php"を実行します。
